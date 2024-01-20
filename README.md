@@ -1,8 +1,13 @@
 # Build-a-SIEM
-My goal for this project is to understand how VMs, SIEMs, and other cybersecurity tools I've learned about in my journey and put them into practice in a homelab enviroment. 
-- Hardware: Lenovo ThinkPad T480 i7-8550U 
+My goal for this project is to manage and configure a SIEM (Security information and event management), in a homelab enviroment. As well as implement cybersecurity tools to practice with. 
+- Hardware: Lenovo ThinkPad T480 i7-8550U Windows 11
 - VMware Workstation Pro running Ubuntu 22 and with Kali Linux 
-- Setup, update, and configure Ubuntu
+- Setup, update, and configure Ubuntu to have the SIEM run 24/7
 - Setup and configure Wazuh
 - Deploy Kali Linux as an agent
+- Deploy Windows 10 and MacOS (Future)
+
+# Step 1
+Download VMware 
+-https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html
   
