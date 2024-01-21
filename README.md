@@ -1,4 +1,4 @@
-# Build-a-SIEM
+# Build a SIEM
 My goal for this project is to document, configure, modify, and manage a SIEM (Security information and event management), in a homelab enviroment. As well as implement cybersecurity tools to practice with. 
 - VMware Workstation Pro running Ubuntu 22 and with Kali Linux 
 - Setup, update, and configure Ubuntu to have the SIEM running 24/7
@@ -50,6 +50,7 @@ ifconfig on terminal and find your IP address copy and paste the ip into the ind
 
 <indexer-node-ip>, <wazuh-manager-ip>,  <dashboard-node-ip>
 
+_______________________________________________________________________________________
 
    nodes:
   # Wazuh indexer nodes
@@ -78,8 +79,8 @@ ifconfig on terminal and find your IP address copy and paste the ip into the ind
   # Wazuh dashboard nodes
   dashboard:
     - name: dashboard
-      ip: "<dashboard-node-ip>" "
-
+      ip: "<dashboard-node-ip>"
+_______________________________________________________________________________________
 3. Generate install files.
    
 sudo bash wazuh-install.sh --generate-config-files
@@ -124,9 +125,8 @@ sudo systemctl start wazuh-agent
 
 # Problems / Fixes so far
 
-- Killed process mksSandbox.exe resulting VMware not having a network connection with the host.
+- Killed process in windows  'mksSandbox.exe' resulting VMware not having a network connection with the host.
 - FIX: restarting windows resolved the problem.
 - Issue with not being able to extract wazuh-files.tar.
 - FIX:
-- su root
-  tar xfv wazuh-install-files.tar
+  su root tar xfv wazuh-install-files.tar
