@@ -7,9 +7,77 @@ My goal for this project is to document, configure, and manage a SIEM (Security 
 - Deploy Windows 10 and MacOS (Future)
 
 # Step 1
-Download VMware 
+Download VMware , Ubuntu 22 ISO
 -https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html
+-https://ubuntu.com/download/desktop
+
+Go through virtual machine wizard.
+- input username / password
+- customize hardware, 4gb 2 cpu cores
+- new install, minimal installation, download updates while install
+- Fresh install
+
+  sudo apt install curl
+  sudo apt install net-tools
+  sudo apt install tar 
+
+
+
+
+# Step 2
+Installing the Wazuh indexer using the assisted installation method
+
+1. Download the Wazuh installation assistant and the configuration file.
+   
+   curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh
+   curl -sO https://packages.wazuh.com/4.7/config.yml
+
+2. Edit ./config.yml
+   
+   and replace the node names and IP values with the corresponding names and IP addresses.
+   You need to do this for all Wazuh server, Wazuh indexer, and Wazuh dashboard nodes. Add as many node fields as needed.
+
+   nodes:
+  # Wazuh indexer nodes
+  indexer:
+    - name: node-1
+      ip: "<indexer-node-ip>"
+    #- name: node-2
+    #  ip: "<indexer-node-ip>"
+    #- name: node-3
+    #  ip: "<indexer-node-ip>"
+
+  # Wazuh server nodes
+  # If there is more than one Wazuh server
+  # node, each one must have a node_type
+  server:
+    - name: wazuh-1
+      ip: "<wazuh-manager-ip>"
+    #  node_type: master
+    #- name: wazuh-2
+    #  ip: "<wazuh-manager-ip>"
+    #  node_type: worker
+    #- name: wazuh-3
+    #  ip: "<wazuh-manager-ip>"
+    #  node_type: worker
+
+  # Wazuh dashboard nodes
+  dashboard:
+    - name: dashboard
+      ip: "<dashboard-node-ip>"
+
+3. Generate install files.
+   
+sudo bash wazuh-install.sh --generate-config-files
+
+4. Install the Wazuh server
+
+bash wazuh-install.sh
+
+
+
   
+
 
 
 
@@ -24,7 +92,6 @@ Download VMware
 
 - Killed process mksSandbox.exe resulting VMware not having a network connection with the host, restarting windows resolved the problem.
 - Issue with not being able to extract wazuh-files.tar.
-
-  su root
+- FIX: su root
   sudo apt install tar
   tar xfv wazuh-install-files.tar
