@@ -5,6 +5,7 @@ My goal for this project is to document, configure, modify, and manage a SIEM (S
 - Setup and configure Wazuh
 - Deploy Kali Linux as an agent
 - Deploy Windows 10 and MacOS (Future)
+- Password spraying (Future)
 
 #  Step 1
 
@@ -112,9 +113,10 @@ sudo systemctl daemon-reload
 sudo systemctl enable wazuh-agent
 sudo systemctl start wazuh-agent
 
+3. wazuh passwords
 
-
-
+   cd wazuh-install-files/
+   sudo cat wazuh-passwords.txt | more
 
 
 
@@ -126,5 +128,4 @@ sudo systemctl start wazuh-agent
 - Issue with not being able to extract wazuh-files.tar.
 - FIX:
 - su root
-  sudo apt install tar
   tar xfv wazuh-install-files.tar
