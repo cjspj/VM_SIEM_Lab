@@ -121,8 +121,10 @@ sudo systemctl start wazuh-agent
 
 # Problems 
 
-- Killed process mksSandbox.exe resulting VMware not having a network connection with the host, restarting windows resolved the problem.
+- Killed process mksSandbox.exe resulting VMware not having a network connection with the host.
+- FIX: restarting windows resolved the problem.
 - Issue with not being able to extract wazuh-files.tar.
-- FIX: su root
+- FIX:
+- su root
   sudo apt install tar
   tar xfv wazuh-install-files.tar
