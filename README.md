@@ -1,11 +1,12 @@
-# Setup 
-My goal for this project is to document, configure, modify, and manage a SIEM (Security information and event management), in a homelab enviroment. As well as implement cybersecurity tools to practice with. 
-- VMware Workstation Pro running Ubuntu 22 and with Kali Linux 
-- Setup, update, and configure Ubuntu to have the SIEM running 24/7 on my home network
-- Setup and configure Wazuh
-- Deploy Kali Linux as the agent
-- Deploy Windows 10 and MacOS as agents in the future
-- Improve, update, configure, and continuously monitor events
+# Description
+My goal for this project is to learn, document, configure, modify, and manage a SIEM (Security information and event management), for my home network. As well as implement cybersecurity tools to practice with. 
+And have it running 24/7 to analyze and log events.
+
+# Tools 
+- VMware Workstation Pro
+- Ubuntu 22.04
+- Pre-built Kali Linux Virtual Machine
+- Wazuh - Open Source XDR
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
 #  Step 1
 
@@ -101,7 +102,6 @@ Advanced > Accept risk and continue
 
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-
 #  Step 3 Add an agent
 
 Configure new VM > fire up kali linux
@@ -121,18 +121,18 @@ sudo systemctl enable wazuh-agent
 sudo systemctl start wazuh-agent
 
 3. wazuh passwords
-
-   cd wazuh-install-files/
-   sudo cat wazuh-passwords.txt | more
+   
+cd wazuh-install-files/
+sudo cat wazuh-passwords.txt | more
 
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-
-
 # Problems / Fixes so far
 
-- Killed process in windows  'mksSandbox.exe' resulting VMware not having a network connection with the host.
-- FIX: restarting windows resolved the problem.
-- Issue with not being able to extract wazuh-files.tar.
-- FIX:
-  su root tar xfv wazuh-install-files.tar
+- Killed process in windows 'mksSandbox.exe' resulting VMware not having a network connection with the host.
+- FIX: restarting windows resolved the problem, Have found that I can restart / start it in the Services app.
+- Issue with not being able to extract wazuh-files.tar
+- FIX:  su root tar xfv wazuh-install-files.tar
+
+
+
