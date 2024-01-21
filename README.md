@@ -1,12 +1,12 @@
 # Setup 
 My goal for this project is to document, configure, modify, and manage a SIEM (Security information and event management), in a homelab enviroment. As well as implement cybersecurity tools to practice with. 
 - VMware Workstation Pro running Ubuntu 22 and with Kali Linux 
-- Setup, update, and configure Ubuntu to have the SIEM running 24/7
+- Setup, update, and configure Ubuntu to have the SIEM running 24/7 on my home network
 - Setup and configure Wazuh
-- Deploy Kali Linux as an agent
-- Deploy Windows 10 and MacOS as agents
+- Deploy Kali Linux as the agent
+- Deploy Windows 10 and MacOS as agents in the future
 - Improve, update, configure, and continuously monitor events
-_____________________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________
 #  Step 1
 
 Download VMware , Ubuntu 22 ISO
@@ -26,6 +26,8 @@ Go through virtual machine wizard.
   sudo apt install curl
   sudo apt install net-tools
   sudo apt install tar 
+
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 
 #  Step 2 Wazuh install
@@ -50,7 +52,7 @@ ifconfig on terminal and find your IP address copy and paste the ip into the ind
 
 <indexer-node-ip>, <wazuh-manager-ip>,  <dashboard-node-ip>
 
-_______________________________________________________________________________________
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________
 
    nodes:
   # Wazuh indexer nodes
@@ -80,7 +82,8 @@ ________________________________________________________________________________
   dashboard:
     - name: dashboard
       ip: "<dashboard-node-ip>"
-_______________________________________________________________________________________
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________
+
 3. Generate install files.
    
 sudo bash wazuh-install.sh --generate-config-files
@@ -96,18 +99,20 @@ Open terminal ifconfig, copy ip address.
 Open firefox input into url bar https://"ip address"
 Advanced > Accept risk and continue 
 
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+
 #  Step 3 Add an agent
 
 Configure new VM > fire up kali linux
 Home > add agent > select package > deb amd64 > server address: "IP address" > assign agent name: kali_vm
 
-1.  Run the following commands to download and install the agent:
+1.  Input the following into terminal to download and install the agent:
 
 wget https://packages.wazuh.com/4.x/apt/pool/main/w/wazuh-agent/wazuh-agent_4.7.2-1_amd64.deb && sudo WAZUH_MANAGER='IP ADDRESS' 
 WAZUH_AGENT_GROUP='default' WAZUH_AGENT_NAME='kali_vm' dpkg -i ./wazuh-agent_4.7.2-1_amd64.deb
 
-  
-Open terminal in kali and paste above ^ 
+Open terminal in kali and paste above ^ (don't forget sudo)
 
 2.  Start the agent:
 
@@ -120,6 +125,7 @@ sudo systemctl start wazuh-agent
    cd wazuh-install-files/
    sudo cat wazuh-passwords.txt | more
 
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 
 
