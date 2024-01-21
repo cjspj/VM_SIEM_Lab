@@ -1,4 +1,4 @@
-# Build a SIEM
+# Setup a SIEM
 My goal for this project is to document, configure, modify, and manage a SIEM (Security information and event management), in a homelab enviroment. As well as implement cybersecurity tools to practice with. 
 - VMware Workstation Pro running Ubuntu 22 and with Kali Linux 
 - Setup, update, and configure Ubuntu to have the SIEM running 24/7
