@@ -8,7 +8,7 @@ And have it running 24/7 to analyze and log events.
 - Pre-built Kali Linux Virtual Machine
 - Wazuh - Open Source XDR
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
-#  Step 1
+# Step 1: Downloads
 
 Download VMware , Ubuntu 22 ISO
 -https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html
@@ -31,7 +31,7 @@ Go through virtual machine wizard.
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 
-#  Step 2 Wazuh install
+#  Step 2: Wazuh install
 
 Installing the Wazuh indexer using the assisted installation method
 
@@ -102,7 +102,7 @@ Advanced > Accept risk and continue
 
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-#  Step 3 Add an agent
+# Step 3: Add an agent
 
 Configure new VM > fire up kali linux
 Home > add agent > select package > deb amd64 > server address: "IP address" > assign agent name: kali_vm
@@ -126,7 +126,6 @@ cd wazuh-install-files/
 sudo cat wazuh-passwords.txt | more
 
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
-
 # Problems / Fixes so far
 
 - Killed process in windows 'mksSandbox.exe' resulting VMware not having a network connection with the host.
