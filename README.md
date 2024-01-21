@@ -4,16 +4,15 @@ My goal for this project is to document, configure, modify, and manage a SIEM (S
 - Setup, update, and configure Ubuntu to have the SIEM running 24/7
 - Setup and configure Wazuh
 - Deploy Kali Linux as an agent
-- Deploy Windows 10 and MacOS (Future)
-- Password spraying (Future)
-- Pihole (Future)
-- Delete / block malicious passwords (Future)
+- Deploy Windows 10 and MacOS as agents
+- Improve, update, configure, and continuously monitor events
 
 #  Step 1
 
 Download VMware , Ubuntu 22 ISO
 -https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html
 -https://ubuntu.com/download/desktop
+-https://www.kali.org/get-kali/#kali-virtual-machines (VMware)
 
 Go through virtual machine wizard.
 - input username / password
@@ -52,7 +51,7 @@ ifconfig on terminal and find your IP address copy and paste the ip into the ind
 <indexer-node-ip>, <wazuh-manager-ip>,  <dashboard-node-ip>
 
 
- "  nodes:
+   nodes:
   # Wazuh indexer nodes
   indexer:
     - name: node-1
@@ -62,9 +61,9 @@ ifconfig on terminal and find your IP address copy and paste the ip into the ind
     #- name: node-3
     #  ip: "<indexer-node-ip>"
 
-  # Wazuh server nodes
-  # If there is more than one Wazuh server
-  # node, each one must have a node_type
+   # Wazuh server nodes
+   # If there is more than one Wazuh server
+    # node, each one must have a node_type
   server:
     - name: wazuh-1
       ip: "<wazuh-manager-ip>"
