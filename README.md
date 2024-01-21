@@ -49,7 +49,7 @@ ifconfig on terminal and find your IP address copy and paste the ip into the ind
 <indexer-node-ip>, <wazuh-manager-ip>,  <dashboard-node-ip>
 
 
-   nodes:
+ "  nodes:
   # Wazuh indexer nodes
   indexer:
     - name: node-1
@@ -76,7 +76,7 @@ ifconfig on terminal and find your IP address copy and paste the ip into the ind
   # Wazuh dashboard nodes
   dashboard:
     - name: dashboard
-      ip: "<dashboard-node-ip>"
+      ip: "<dashboard-node-ip>" "
 
 3. Generate install files.
    
