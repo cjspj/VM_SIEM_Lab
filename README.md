@@ -122,7 +122,7 @@ sudo systemctl start wazuh-agent
 
 
 
-# Problems 
+# Problems / Fixes so far
 
 - Killed process mksSandbox.exe resulting VMware not having a network connection with the host.
 - FIX: restarting windows resolved the problem.
