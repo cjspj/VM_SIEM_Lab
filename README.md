@@ -23,3 +23,7 @@ Download VMware
 # Problems 
 
 - Killed process mksSandbox.exe resulting VMware not having a network connection with the host, restarting windows resolved the problem.
+- Issue with not being able to extract wazuh-files.tar.
+  su root
+  sudo apt install tar
+  tar xfv wazuh-install-files.tar
