@@ -6,7 +6,7 @@ My goal for this project is to document, configure, modify, and manage a SIEM (S
 - Deploy Kali Linux as an agent
 - Deploy Windows 10 and MacOS as agents
 - Improve, update, configure, and continuously monitor events
-
+_____________________________________________________________________________________________________________________________
 #  Step 1
 
 Download VMware , Ubuntu 22 ISO
