@@ -17,34 +17,24 @@ ________________________________________________________________________________
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
 # Installation 
 ![image](https://github.com/cjspj/VM_SIEM_Homelab/assets/90308312/d4664cd0-0072-490a-8bd3-c74981ffd298)
-
 -  Install Ubuntu, have the .iso file ready to mount 
 -  Install VMware, run it
 -  New Virtual Machine Wizard > Browse and find the Ubuntu .iso file
 -  Enter user credentials for login
 -  Customize hardware > 20GB disk capacity space > RAM: 8GB > Processor cores: 2
--  Start up guest > run the setup > select the basic configurations
+-  Start up guest > run the setup > select the minimal installation options > username, password >
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
-
-
-
-
-Input username / password > 
-
-
-
-
-- customize hardware, 4gb 2 cpu cores
-- new install, minimal installation, download updates while install
-- Fresh install
-- Open up terminal
-- Apply the commands in order to have it functional 
+#  Ubuntu 22
+-  Once installation is complete
+-  Run the following commands in terminal 
 
   sudo apt install update
   sudo apt install upgrade
   sudo apt install curl
   sudo apt install net-tools
   sudo apt install tar
+
+
 
 
 
