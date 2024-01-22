@@ -1,24 +1,26 @@
 # Description
-My goal for this project is to get first hand experience using a SIEM (Security information and event management) and setup a VM (Virtual Machine)
-
+My goal for this project is to get first hand experience setting up a VM (Virtual Machine) and utilizing a SIEM (Security information and event management).
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________
 # Tools 
 - VMware Workstation Pro
-- Ubuntu 22.04
-- Pre-built Kali Linux Virtual Machine
-- Wazuh - Open Source XDR
+- Ubuntu 
+- Kali Linux
+- Wazuh
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
-#Downloads
-Download VMware , Ubuntu 22 ISO
+#  Downloads
 -  VMware:  https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html
 -  Ubuntu:  https://ubuntu.com/download/desktop
 -  Kali Linux:  https://www.kali.org/get-kali/#kali-virtual-machines (VMware)
+-  Wazuh:  https://documentation.wazuh.com/current/installation-guide/wazuh-indexer/installation-assistant.html
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________
+# Installation 
 
-Go through virtual machine wizard.
-- input username / password
+-   Input username / password
 - customize hardware, 4gb 2 cpu cores
 - new install, minimal installation, download updates while install
 - Fresh install
 - Open up terminal
+- Apply the commands in order to have it functional 
 
   sudo apt install update
   sudo apt install upgrade
@@ -28,8 +30,7 @@ Go through virtual machine wizard.
 
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-
-#  Step 2: Wazuh install
+#  Wazuh install
 
 Installing the Wazuh indexer using the assisted installation method
 
@@ -100,7 +101,7 @@ Advanced > Accept risk and continue
 
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
 
-# Step 3: Add an agent
+# Add an agent
 
 Configure new VM > fire up kali linux
 Home > add agent > select package > deb amd64 > server address: "IP address" > assign agent name: kali_vm
