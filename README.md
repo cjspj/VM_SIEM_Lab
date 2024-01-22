@@ -1,6 +1,5 @@
 # Description
-My goal for this project is to learn, document, configure, modify, and manage a SIEM (Security information and event management), for my home network. As well as implement cybersecurity tools to practice with. 
-And have it running 24/7 to analyze and log events.
+My goal for this project is to get first hand experience using a SIEM (Security information and event management) and setup a VM (Virtual Machine)
 
 # Tools 
 - VMware Workstation Pro
@@ -8,12 +7,11 @@ And have it running 24/7 to analyze and log events.
 - Pre-built Kali Linux Virtual Machine
 - Wazuh - Open Source XDR
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
-# Step 1: Downloads
-
+#Downloads
 Download VMware , Ubuntu 22 ISO
--https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html
--https://ubuntu.com/download/desktop
--https://www.kali.org/get-kali/#kali-virtual-machines (VMware)
+-  VMware:  https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html
+-  Ubuntu:  https://ubuntu.com/download/desktop
+-  Kali Linux:  https://www.kali.org/get-kali/#kali-virtual-machines (VMware)
 
 Go through virtual machine wizard.
 - input username / password
