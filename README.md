@@ -29,9 +29,13 @@ ________________________________________________________________________________
 -  Run the following commands in terminal 
 
   sudo apt install update
+  
   sudo apt install upgrade
+  
   sudo apt install curl
+  
   sudo apt install net-tools
+  
   sudo apt install tar
 
 
