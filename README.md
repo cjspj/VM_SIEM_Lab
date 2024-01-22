@@ -41,35 +41,21 @@ ________________________________________________________________________________
   sudo apt install tar
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
 #  Wazuh
+-  Open firefox in Ubuntu
+-  Type in URL: https://documentation.wazuh.com/current/installation-guide/wazuh-indexer/installation-assistant.html
 
-In terminal: 
-   
    curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh
    curl -sO https://packages.wazuh.com/4.7/config.yml
 
-Edit ./config.yml
-   
-In terminal: 
-
+In terminal:
   sudo nano config.yml
-   
-   and replace the node names and IP values with the corresponding names and IP addresses.
-   You need to do this for all Wazuh server, Wazuh indexer, and Wazuh dashboard nodes. Add as many node fields as needed.
 
+![image](https://github.com/cjspj/VM_SIEM_Lab/assets/90308312/635ba041-677f-4f25-9a76-57417652fce2)
 
-
-
-
-   
-
-On the terminal find the ip address associated with the VM, copy and paste the ip into the indexer, server, and dashboard in the config.yml file, save then exit
-
-<indexer-node-ip>
-  
-<wazuh-manager-ip>
-  
-<dashboard-node-ip>
-
+-  On the terminal find the ip address associated with the VM
+-  use command: ip addr 
+-  and replace the node names and IP values with the corresponding names and IP addresses
+-  save then exit
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
 
    nodes:
