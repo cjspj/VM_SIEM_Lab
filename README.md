@@ -56,7 +56,13 @@ In terminal:
    and replace the node names and IP values with the corresponding names and IP addresses.
    You need to do this for all Wazuh server, Wazuh indexer, and Wazuh dashboard nodes. Add as many node fields as needed.
 
-On the terminal find the ip address associated with the VM, copy and paste the ip into the indexer, server, and dashboard in the config.yml file
+
+
+
+
+   
+
+On the terminal find the ip address associated with the VM, copy and paste the ip into the indexer, server, and dashboard in the config.yml file, save then exit
 
 <indexer-node-ip>
   
