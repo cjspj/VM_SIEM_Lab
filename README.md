@@ -49,59 +49,31 @@ ________________________________________________________________________________
 
 In terminal:
   sudo nano config.yml
+  
+![image](https://github.com/cjspj/VM_SIEM_Lab/assets/90308312/edd78d2b-0356-426f-ba3d-4d6d4a5d8703)
 
-![image](https://github.com/cjspj/VM_SIEM_Lab/assets/90308312/635ba041-677f-4f25-9a76-57417652fce2)
 
 -  On the terminal find the ip address associated with the VM
 -  use command: ip addr 
 -  and replace the node names and IP values with the corresponding names and IP addresses
--  save then exit
-_____________________________________________________________________________________________________________________________________________________________________________________________________________________
+-  save modified buffer and exit 
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________#  Generate install files
 
-   nodes:
-  # Wazuh indexer nodes
-  indexer:
-    - name: node-1
-      ip: "<indexer-node-ip>"
-    #- name: node-2
-    #  ip: "<indexer-node-ip>"
-    #- name: node-3
-    #  ip: "<indexer-node-ip>"
-
-   # Wazuh server nodes
-   # If there is more than one Wazuh server
-    # node, each one must have a node_type
-  server:
-    - name: wazuh-1
-      ip: "<wazuh-manager-ip>"
-    #  node_type: master
-    #- name: wazuh-2
-    #  ip: "<wazuh-manager-ip>"
-    #  node_type: worker
-    #- name: wazuh-3
-    #  ip: "<wazuh-manager-ip>"
-    #  node_type: worker
-
-  # Wazuh dashboard nodes
-  dashboard:
-    - name: dashboard
-      ip: "<dashboard-node-ip>"
-_____________________________________________________________________________________________________________________________________________________________________________________________________________________
-
-3. Generate install files.
-   
+In terminal: 
 sudo bash wazuh-install.sh --generate-config-files
 
-4. Install the Wazuh server
-
+-  Install the Wazuh server
+  
+In terminal:
 sudo bash wazuh-install.sh -a
 
-It took about 8 minutes to complete installation
-Copy the admin and password and paste to notes, change defaults later on.
+-  It took about 8 minutes to complete installation
+-  Copy the admin and password and paste to notes, change defaults later on.
 
-Open terminal ifconfig, copy ip address
-Open firefox input into url bar https://"ip address"
-Advanced > Accept risk and continue 
+In terminal:
+-  ifconfig: copy ip address
+-  Open firefox input into url bar https://"ip address"
+-  Advanced > Accept risk and continue 
 
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
 # Add an agent
