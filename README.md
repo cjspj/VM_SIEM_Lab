@@ -104,7 +104,7 @@ sudo cat wazuh-passwords.txt | more
 
 - Save any passwords 
 
-
+If everything goes well I should have 1 agent working and active. 
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
 # Problems / Fixes so far
 
