@@ -24,9 +24,11 @@ ________________________________________________________________________________
 -  Customize hardware > 20GB disk capacity space > RAM: 8GB > Processor cores: 2
 -  Start up guest > run the setup > select the minimal installation options > username, password >
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
-#  Ubuntu 22
+#  Ubuntu
 -  Once installation is complete
--  Run the following commands in terminal 
+-  Run the following commands in terminal:
+
+  ![image](https://github.com/cjspj/VM_SIEM_Lab/assets/90308312/446c3c42-8c09-436c-a618-eead7abe7603)
 
   sudo apt install update
   
@@ -37,51 +39,30 @@ ________________________________________________________________________________
   sudo apt install net-tools
   
   sudo apt install tar
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
 #  Wazuh
 
-Installing the Wazuh indexer using the assisted installation method
-
-1. Download the Wazuh installation assistant and the configuration file.
+In terminal: 
    
    curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh
    curl -sO https://packages.wazuh.com/4.7/config.yml
 
-2. Edit ./config.yml
+Edit ./config.yml
    
-in the terminal 
+In terminal: 
 
   sudo nano config.yml
    
    and replace the node names and IP values with the corresponding names and IP addresses.
    You need to do this for all Wazuh server, Wazuh indexer, and Wazuh dashboard nodes. Add as many node fields as needed.
 
-ifconfig on terminal and find your IP address copy and paste the ip into the indexer, server, and dashboard 
+On the terminal find the ip address associated with the VM, copy and paste the ip into the indexer, server, and dashboard in the config.yml file
 
-<indexer-node-ip>, <wazuh-manager-ip>,  <dashboard-node-ip>
+<indexer-node-ip>
+  
+<wazuh-manager-ip>
+  
+<dashboard-node-ip>
 
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
 
@@ -126,12 +107,11 @@ sudo bash wazuh-install.sh -a
 It took about 8 minutes to complete installation
 Copy the admin and password and paste to notes, change defaults later on.
 
-Open terminal ifconfig, copy ip address.
+Open terminal ifconfig, copy ip address
 Open firefox input into url bar https://"ip address"
 Advanced > Accept risk and continue 
 
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
-
 # Add an agent
 
 Configure new VM > fire up kali linux
