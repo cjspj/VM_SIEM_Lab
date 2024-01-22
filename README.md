@@ -74,31 +74,36 @@ sudo bash wazuh-install.sh -a
 In terminal:
 -  ifconfig: copy ip address
 -  Open firefox input into url bar https://"ip address"
--  Advanced > Accept risk and continue 
+-  Advanced > Accept risk and continue
+-  Enter admin and password
 
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
-# Add an agent
+# Kali Linux + Deploy agent
 
-Configure new VM > fire up kali linux
-Home > add agent > select package > deb amd64 > server address: "IP address" > assign agent name: kali_vm
+![image](https://github.com/cjspj/VM_SIEM_Lab/assets/90308312/f60f411f-7fd1-435c-ac82-728f29588e45)
 
-1.  Input the following into terminal to download and install the agent:
+- Power on the virtual machine
+- Minimal configuration setup 
 
-wget https://packages.wazuh.com/4.x/apt/pool/main/w/wazuh-agent/wazuh-agent_4.7.2-1_amd64.deb && sudo WAZUH_MANAGER='IP ADDRESS' 
+- Home > Add agent > Select package > deb amd64 > server address: VM IP > assign agent name: kali_vm > default: default
+- Run the following download and commands to run the agent
+
+In kali_vm terminal:
+
+sudo wget https://packages.wazuh.com/4.x/apt/pool/main/w/wazuh-agent/wazuh-agent_4.7.2-1_amd64.deb && sudo WAZUH_MANAGER='IP ADDRESS' 
 WAZUH_AGENT_GROUP='default' WAZUH_AGENT_NAME='kali_vm' dpkg -i ./wazuh-agent_4.7.2-1_amd64.deb
-
-Open terminal in kali and paste above ^ (don't forget sudo)
-
-2.  Start the agent:
 
 sudo systemctl daemon-reload
 sudo systemctl enable wazuh-agent
 sudo systemctl start wazuh-agent
 
-3. wazuh passwords
-   
+In Ubuntu terminal: 
+
 cd wazuh-install-files/
 sudo cat wazuh-passwords.txt | more
+
+- Save any passwords 
+
 
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
 # Problems / Fixes so far
