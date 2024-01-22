@@ -1,5 +1,5 @@
 # Description
-My goal for this project is to get first hand experience setting up a VM (Virtual Machine) and utilizing a SIEM (Security information and event management).
+My goal for this project is to get first hand experience setting up a VM (Virtual Machine) and utilizing a SIEM (Security information and event management). I Will document and use this as a reference if I ever need to setup and configure another instance.
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
 # Tools 
 - VMware Workstation Pro
@@ -8,14 +8,30 @@ ________________________________________________________________________________
 - Wazuh
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
 #  Downloads
--  VMware:  https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html
 -  Ubuntu:  https://ubuntu.com/download/desktop
+-  VMware:  https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html
 -  Kali Linux:  https://www.kali.org/get-kali/#kali-virtual-machines (VMware)
 -  Wazuh:  https://documentation.wazuh.com/current/installation-guide/wazuh-indexer/installation-assistant.html
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
 # Installation 
+![image](https://github.com/cjspj/VM_SIEM_Homelab/assets/90308312/d4664cd0-0072-490a-8bd3-c74981ffd298)
 
--   Input username / password
+-  Install Ubuntu, have the .iso file ready to mount 
+-  Install VMware, run it
+-  New Virtual Machine Wizard > Browse and find the Ubuntu .iso file
+-  Enter user credentials for login
+-  Customize hardware > 20GB disk capacity space > RAM: 8GB > Processor cores: 2
+-  Start up guest > run the setup
+
+
+
+
+
+Input username / password > 
+
+
+
+
 - customize hardware, 4gb 2 cpu cores
 - new install, minimal installation, download updates while install
 - Fresh install
@@ -26,11 +42,30 @@ ________________________________________________________________________________
   sudo apt install upgrade
   sudo apt install curl
   sudo apt install net-tools
-  sudo apt install tar 
+  sudo apt install tar
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
-
-#  Wazuh install
+#  Wazuh
 
 Installing the Wazuh indexer using the assisted installation method
 
