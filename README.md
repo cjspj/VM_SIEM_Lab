@@ -1,7 +1,9 @@
 # Description
-My goal for this project is to get first hand experience setting up a VM (Virtual Machine) and utilizing a SIEM (Security information and event management). I Will document and use this as a reference if I ever need to setup and configure another instance.
+My goal for this project is to get first hand experience setting up a VM (Virtual Machine) and utilizing a SIEM (Security information and event management) in a homelab enviroment. I will document, modify, configure and use this as a reference if I ever need to setup and configure another instance.
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
 # Tools 
+- Lenovo ThinkPad i7-8550U 32GB
+- Windows 11 Pro
 - VMware Workstation Pro
 - Ubuntu 
 - Kali Linux
@@ -21,8 +23,8 @@ ________________________________________________________________________________
 -  New Virtual Machine Wizard > Browse and find the Ubuntu .iso file
 -  Enter user credentials for login
 -  Customize hardware > 20GB disk capacity space > RAM: 8GB > Processor cores: 2
--  Start up guest > run the setup
-
+-  Start up guest > run the setup > select the basic configurations
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________
 
 
 
