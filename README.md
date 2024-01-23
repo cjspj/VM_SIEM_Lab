@@ -120,13 +120,8 @@ ________________________________________________________________________________
 -  Setup for 24/7 home network
 -  Monitor and log events 
 
-_____________________________________________________________________________________________________________________________________________________________________________________________________________________
-# Problems
 
-- Killed process in windows 'mksSandbox.exe' resulting VMware not having a network connection with the host.
-- FIX: restarting windows resolved the problem, Have found that I can restart / start it in the Services app.
-- Issue with not being able to extract wazuh-files.tar
-- FIX: su root tar xfv wazuh-install-files.tar
+
 
 
 
