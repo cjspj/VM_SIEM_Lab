@@ -99,7 +99,7 @@ sudo systemctl daemon-reload
 sudo systemctl enable wazuh-agent
 
 sudo systemctl start wazuh-agent
-
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________
 In Ubuntu terminal: 
 
 su root tar xfv wazuh-install-files.tar
@@ -108,7 +108,9 @@ cd wazuh-install-files/
 
 sudo cat wazuh-passwords.txt | more
 
-- Save any passwords 
+- Save any passwords
+
+![image](https://github.com/cjspj/VM_SIEM_Lab/assets/90308312/f75a6559-1d0e-4844-8c07-64fef320d65c)
 
 If everything goes right I should have the kali_vm agent active and functional. 
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
