@@ -55,7 +55,7 @@ In terminal:
 
 -  On the terminal find the ip address associated with the VM
 -  use command: ip addr 
--  and replace the node names and IP values with the corresponding names and IP addresses
+-  replace the node names and IP values with the corresponding names and IP addresses
 -  save modified buffer and exit 
 ________________________________________________________________________________________________________________________________________________________________________________________________________________
 #  Generate install files
@@ -66,8 +66,8 @@ sudo bash wazuh-install.sh --generate-config-files
 In terminal:
 sudo bash wazuh-install.sh -a
 
--  It took about 8 minutes to complete installation
--  Copy the admin and password and paste to notes, change defaults later on.
+-  8 minutes to complete installation
+-  Copy the password and paste to notes, change defaults later on.
 
   ![image](https://github.com/cjspj/VM_SIEM_Lab/assets/90308312/7eb2ea22-55e5-4112-84b9-38db4fc023c9)
 
