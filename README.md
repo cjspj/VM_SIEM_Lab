@@ -29,7 +29,7 @@ ________________________________________________________________________________
 -  Run the following commands in terminal:
 
   ![image](https://github.com/cjspj/VM_SIEM_Lab/assets/90308312/446c3c42-8c09-436c-a618-eead7abe7603)
-
+```<br><br>
   sudo apt install update
   
   sudo apt install upgrade
@@ -39,7 +39,9 @@ ________________________________________________________________________________
   sudo apt install net-tools
   
   sudo apt install tar
-_____________________________________________________________________________________________________________________________________________________________________________________________________________________
+```
+<br><br>
+______________________________________________________________________________________________________________________________________________________________________________________________________
 #  Wazuh
 -  Open firefox in Ubuntu
 -  Type in URL: https://documentation.wazuh.com/current/installation-guide/wazuh-indexer/installation-assistant.html
@@ -48,7 +50,7 @@ ________________________________________________________________________________
    curl -sO https://packages.wazuh.com/4.7/config.yml
 
 In terminal:
-  sudo nano config.yml
+  sudo nano config.yml [`config.yml`](config.yml)
   
 ![image](https://github.com/cjspj/VM_SIEM_Lab/assets/90308312/edd78d2b-0356-426f-ba3d-4d6d4a5d8703)
 
