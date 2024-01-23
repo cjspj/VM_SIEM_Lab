@@ -88,30 +88,44 @@ ________________________________________________________________________________
 - Home > Add agent > Select package > deb amd64 > server address: VM IP > assign agent name: kali_vm > default: default
 - Run the following download and commands to run the agent
 
+Copy from Windows to:
 In kali_vm terminal:
 
 sudo wget https://packages.wazuh.com/4.x/apt/pool/main/w/wazuh-agent/wazuh-agent_4.7.2-1_amd64.deb && sudo WAZUH_MANAGER='IP ADDRESS' 
 WAZUH_AGENT_GROUP='default' WAZUH_AGENT_NAME='kali_vm' dpkg -i ./wazuh-agent_4.7.2-1_amd64.deb
 
 sudo systemctl daemon-reload
+
 sudo systemctl enable wazuh-agent
+
 sudo systemctl start wazuh-agent
 
 In Ubuntu terminal: 
 
+su root tar xfv wazuh-install-files.tar
+
 cd wazuh-install-files/
+
 sudo cat wazuh-passwords.txt | more
 
 - Save any passwords 
 
-If everything goes well I should have 1 agent working and active. 
+If everything goes right I should have the kali_vm agent active and functional. 
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
-# Problems / Fixes so far
+# Final Thoughts / Future Addons
+
+-  Deploy Windows and MacOS as an agent
+-  Setup for 24/7 home network
+-  Monitor and log events 
+
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________
+# Problems
 
 - Killed process in windows 'mksSandbox.exe' resulting VMware not having a network connection with the host.
 - FIX: restarting windows resolved the problem, Have found that I can restart / start it in the Services app.
 - Issue with not being able to extract wazuh-files.tar
-- FIX:  su root tar xfv wazuh-install-files.tar
+- FIX: su root tar xfv wazuh-install-files.tar
+
 
 
 
