@@ -1,5 +1,5 @@
 # Description
-My goal for this project is to get first hand experience setting up a VM (Virtual Machine) and utilizing a SIEM (Security information and event management) in a homelab enviroment. I will document, modify, configure and use this as a reference if I ever need to setup and configure another instance.
+In this project, my primary objective is to gain firsthand experience in the setup of a Virtual Machine (VM) and the effective utilization of a Security Information and Event Management (SIEM) system within a homelab environment. I aim to meticulously document, modify, and configure this setup, creating a comprehensive reference guide for future instances where I need to establish and configure similar environments. This project serves as both a learning journey and a practical resource for seamless VM and SIEM implementation.
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
 # Tools 
 - Lenovo ThinkPad i7-8550U 32GB
@@ -54,11 +54,19 @@ In terminal:
   
 ![image](https://github.com/cjspj/VM_SIEM_Lab/assets/90308312/edd78d2b-0356-426f-ba3d-4d6d4a5d8703)
 
+# Run the following command to view the IP addresses
+ip addr
 
--  On the terminal find the ip address associated with the VM
--  use command: ip addr 
--  replace the node names and IP values with the corresponding names and IP addresses
--  save modified buffer and exit 
+# Identify the relevant IP address associated with the VM
+
+# Open a text editor (e.g., nano) to modify the buffer
+nano /etc/hosts
+
+# Replace the existing node names and IP values with the corresponding names and IP addresses
+
+# Save the modified buffer and exit the text editor
+# In nano, you can typically press Ctrl + X, then press Y to confirm changes, and finally press Enter to exit
+
 ________________________________________________________________________________________________________________________________________________________________________________________________________________
 #  Generate install files
 
@@ -73,11 +81,22 @@ sudo bash wazuh-install.sh -a
 
   ![image](https://github.com/cjspj/VM_SIEM_Lab/assets/90308312/7eb2ea22-55e5-4112-84b9-38db4fc023c9)
 
-In terminal:
--  ifconfig: copy ip address
--  Open firefox input into url bar https://"ip address"
--  Advanced > Accept risk and continue
--  Enter admin and password
+# Run ifconfig to retrieve the IP address
+ifconfig
+
+# Copy the IP address displayed in the terminal
+
+# Open Firefox and enter the Wazuh manager URL
+firefox https://<IP_ADDRESS>
+
+# In Firefox, navigate to "Advanced," then click "Accept the Risk and Continue"
+
+# Enter the default credentials
+# Username: admin
+# Password: <password>
+
+# You should now have access to the Wazuh manager interface.
+
 
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
 # Kali Linux + Deploy agent
@@ -102,19 +121,26 @@ sudo systemctl enable wazuh-agent
 
 sudo systemctl start wazuh-agent
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
-In Ubuntu terminal: 
+# Switch to root user
+su root
 
-su root tar xfv wazuh-install-files.tar
+# Extract Wazuh installation files
+tar xfv wazuh-install-files.tar
 
+# Move to the installation directory
 cd wazuh-install-files/
 
+# View Wazuh passwords
 sudo cat wazuh-passwords.txt | more
 
-- Save any passwords
+# Save any relevant passwords
 
-![image](https://github.com/cjspj/VM_SIEM_Lab/assets/90308312/f75a6559-1d0e-4844-8c07-64fef320d65c)
+# Check installation progress
+# [Optional] You can verify the installation status by viewing the provided screenshot
+![Installation Progress](https://github.com/cjspj/VM_SIEM_Lab/assets/90308312/f75a6559-1d0e-4844-8c07-64fef320d65c)
 
-If everything goes right I should have the kali_vm agent active and functional. 
+# If everything goes as expected, the Kali Linux VM agent should be active and fully functional.
+
 _____________________________________________________________________________________________________________________________________________________________________________________________________________________
 # Final Thoughts / Future Addons
 
